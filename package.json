@@ -1,11 +1,11 @@
 {
-  "name": "javascript-library-template",
+  "name": "iron-store",
   "version": "0.0.0-development",
   "private": false,
-  "description": "JavaScript library template to focus on ⌨️ coding, 🙌 collaborating and 🚀 shipping",
+  "description": "in-memory, signed and encrypted JavaScript store",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vvo/javascript-library-template.git"
+    "url": "https://github.com/vvo/iron-store.git"
   },
   "license": "MIT",
   "author": "Vincent Voyer <vincent@codeagain.com>",
@@ -54,7 +54,10 @@
     ]
   },
   "jest": {},
-  "dependencies": {},
+  "dependencies": {
+    "@hapi/iron": "^6.0.0",
+    "clone": "^2.1.2"
+  },
   "devDependencies": {
     "@babel/cli": "7.8.4",
     "@babel/core": "7.8.7",
