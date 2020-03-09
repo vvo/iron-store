@@ -8,6 +8,8 @@ This is a low-level module that you can use to implement signed and encrypted se
 
 Signature and encryption is based on [@hapi/iron](https://hapi.dev/family/iron/).
 
+Use https://1password.com/password-generator/ to generate strong passwords.
+
 ```bash
 npm add iron-store
 ```
@@ -20,10 +22,11 @@ npm add iron-store
 import ironStore from "iron-store";
 
 const store = await ironStore({
-  password: "genereated_complex_password_at_least_32_characters_long"
+  password: "generated_complex_password_at_least_32_characters_long"
 });
 store.set("user", { id: 80, admin: true });
 const seal = await store.seal();
+//
 ```
 
 **Creating a store from previously sealed data (_decrypt_)**:
@@ -32,17 +35,17 @@ const seal = await store.seal();
 import ironStore from "iron-store";
 
 const store = await ironStore({
-  password: "genereated_complex_password_at_least_32_characters_long",
+  password: "generated_complex_password_at_least_32_characters_long",
   sealed: "seal_obtained_from_previous_store.seal()_call"
 });
 const user = store.get("user");
-
-const seal = await store.seal();
+console.log(user);
+// { id:80, admin:true }
 ```
 
 ## API
 
-### ironStore({sealed, password, ttl = 0})
+### ironStore({ sealed, password, ttl = 0 })
 
 ### store.set(name, value)
 
