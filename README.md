@@ -49,8 +49,12 @@ console.log(user);
 
 ### store.set(name, value)
 
-### store.get(name)
+### store.get([name])
 
 ### store.setFlash(name, value)
 
+### store.unset(name)
+
 ### store.seal()
+
+### store.clear()
