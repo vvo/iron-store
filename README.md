@@ -22,7 +22,7 @@ npm add iron-store
 import ironStore from "iron-store";
 
 const store = await ironStore({
-  password: "generated_complex_password_at_least_32_characters_long"
+  password: "generated_complex_password_at_least_32_characters_long",
 });
 store.set("user", { id: 80, admin: true });
 const seal = await store.seal();
@@ -36,7 +36,7 @@ import ironStore from "iron-store";
 
 const store = await ironStore({
   password: "generated_complex_password_at_least_32_characters_long",
-  sealed: "seal_obtained_from_previous_store.seal()_call"
+  sealed: "seal_obtained_from_previous_store.seal()_call",
 });
 const user = store.get("user");
 console.log(user);
