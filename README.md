@@ -10,6 +10,8 @@ Signature and encryption is based on [@hapi/iron](https://hapi.dev/family/iron/)
 
 Use https://1password.com/password-generator/ to generate strong passwords.
 
+You can use multiple passwords (password rotation).
+
 ```bash
 npm add iron-store
 ```
@@ -43,9 +45,40 @@ console.log(user);
 // { id:80, admin:true }
 ```
 
+**Creating a store using multiple passwords (_password rotation_)**:
+
+You can implement password rotation by providing an array of passwords and ids. The id can be a string (letters, numbers and \_) or just a number.
+
+The first password in the array is always the one used to `seal` data. All the other passwords are used to decrypt data.
+
+Note: The `id` is mandatory and part of the seal, so that we can know in advance which password to use when decrypting. You need to use unique ids. You cannot reuse a id for a different password.
+
+Note: If you started to use the `string` form of password, you can always move to an `array` of password objects. The `string` form of your password is internally handled as `{ id: 1, password }`.
+
+```js
+import ironStore from "iron-store";
+
+const store = await ironStore({
+  password: [
+    {
+      id: 2,
+      password: "generated_complex_password_at_least_32_characters_long",
+    },
+    {
+      id: 1,
+      password: "generated_complex_password_at_least_32_characters_long",
+    },
+  ],
+});
+store.set("user", { id: 80, admin: true });
+const seal = await store.seal();
+```
+
+Th
+
 ## API
 
-### ironStore({ sealed, password, ttl = 0 })
+### ironStore({ [sealed], password, ttl = 0 })
 
 ### store.set(name, value)
 
