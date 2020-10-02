@@ -74,8 +74,6 @@ store.set("user", { id: 80, admin: true });
 const seal = await store.seal();
 ```
 
-Th
-
 ## API
 
 ### ironStore({ [sealed], password, ttl = 0 })
