@@ -104,6 +104,11 @@
       ":automergeLinters",
       ":automergeTesters",
       ":automergeTypes"
-    ]
+    ],
+    "timezone": "Europe/Paris",
+    "schedule": [
+      "before 3am on Monday"
+    ],
+    "groupName": "all"
   }
 }
