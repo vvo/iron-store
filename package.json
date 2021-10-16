@@ -95,6 +95,12 @@
     "semantic-release": "^18.0.0",
     "semantic-release-cli": "^5.4.4"
   },
+  "release": {
+    "branches": [
+      "main",
+      "next"
+    ]
+  },
   "renovate": {
     "extends": [
       "config:js-lib",
