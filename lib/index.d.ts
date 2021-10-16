@@ -1,5 +1,5 @@
 export type StoreOptions = {
-  sealed?: boolean;
+  sealed?: string;
   password: string | { id: number; password: string }[];
   ttl?: number;
 };
