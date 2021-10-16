@@ -1,4 +1,4 @@
-# iron-store [![GitHub license](https://img.shields.io/github/license/vvo/iron-store?style=flat)](https://github.com/vvo/iron-store/blob/master/LICENSE) [![Tests](https://github.com/vvo/iron-store/workflows/CI/badge.svg)](https://github.com/vvo/iron-store/actions) [![codecov](https://codecov.io/gh/vvo/iron-store/branch/master/graph/badge.svg)](https://codecov.io/gh/vvo/iron-store) ![npm](https://img.shields.io/npm/v/iron-store)
+# iron-store [![GitHub license](https://img.shields.io/github/license/vvo/iron-store?style=flat)](https://github.com/vvo/iron-store/blob/main/LICENSE) [![Tests](https://github.com/vvo/iron-store/workflows/CI/badge.svg)](https://github.com/vvo/iron-store/actions) [![codecov](https://codecov.io/gh/vvo/iron-store/branch/main/graph/badge.svg)](https://codecov.io/gh/vvo/iron-store) ![npm](https://img.shields.io/npm/v/iron-store)
 
 _🧿 in-memory, signed and encrypted JavaScript store_
 
