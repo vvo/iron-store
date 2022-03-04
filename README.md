@@ -2,6 +2,8 @@
 
 _🧿 in-memory, signed and encrypted JavaScript store_
 
+**UPDATE FROM MAINTAINER**: You can now use https://github.com/vvo/iron-session/ directly and its methods `sealData` `unsealData` which will provide the same functionnality than iron-store.
+
 ---
 
 This is a low-level module that you can use to implement signed and encrypted sessions using cookies for example, like [`next-iron-session`](https://github.com/vvo/next-iron-session) does.
